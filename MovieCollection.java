@@ -7,6 +7,7 @@ public class MovieCollection {
     private ArrayList<Movie> movies = new ArrayList<>();
 
     public MovieCollection() {
+        importMovies();
         getMenu();
     }
     public void getMenu() {
@@ -29,6 +30,28 @@ public class MovieCollection {
                 System.out.println("Goodbye!");
             } else {
                 System.out.println("Invalid choice!");
+            }
+        }
+    }
+    public void searchTitles() {
+        ArrayList<String> titles = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a title search term: ");
+        String term = scan.nextLine();
+        for (int i = 0; i < movies.size(); i++) {
+            if ((movies.get(i).getTitle()).contains(term)) {
+                titles.add((movies.get(i).getTitle()));
+            }
+        }
+    }
+    public void searchCast() {
+        ArrayList<String> names = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a person to search for: ");
+        String name = scan.nextLine();
+        for (int i = 0; i < movies.size(); i++) {
+            if ((movies.get(i).getTitle()).contains(name)) {
+                names.add((movies.get(i).getCast()));
             }
         }
     }
