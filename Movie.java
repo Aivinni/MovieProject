@@ -1,12 +1,12 @@
 public class Movie {
     private String title;
-    private String cast;
+    private String[] cast;
     private String director;
     private String overview;
     private int runtime;
     private int rating;
 
-    public Movie(String title, String cast, String director, String overview, int runtime, int rating) {
+    public Movie(String title, String[] cast, String director, String overview, int runtime, int rating) {
         this.title = title;
         this.cast = cast;
         this.director = director;
@@ -18,7 +18,7 @@ public class Movie {
     public String getTitle() {
         return title;
     }
-    public String getCast() {
+    public String[] getCast() {
         return cast;
     }
     public String getDirector() {

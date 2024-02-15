@@ -37,12 +37,24 @@ public class MovieCollection {
             Scanner fileScanner = new Scanner(new File("movies_data.csv"));
             while (fileScanner.hasNext()) {
                 String[] movieData = fileScanner.next().split(",");
-                Movie movie = new Movie(movieData[0], movieData[1], movieData[2], movieData[3], Integer.parseInt(movieData[4]), Integer.parseInt(movieData[5]));
+                Movie movie = new Movie(movieData[0], movieData[1].split("|"), movieData[2], movieData[3], Integer.parseInt(movieData[4]), Integer.parseInt(movieData[5]));
                 movies.add(movie);
             }
             fileScanner.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
+        }
+    }
+    public void sortListTitle() {
+        for (int i = 1; i < movies.size(); i++) {
+            Movie swap = movies.get(i);
+            for (int j = i; j > 0; j--) {
+                Movie movie2 = movies.get(j);
+                int moviesMin = Math.min(swap.getTitle().length(), movie2.getTitle().length());
+                for (int k = 0; k < moviesMin; k++) {
+                    
+                }
+            }
         }
     }
 }
