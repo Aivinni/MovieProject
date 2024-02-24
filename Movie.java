@@ -4,9 +4,9 @@ public class Movie {
     private String director;
     private String overview;
     private int runtime;
-    private int rating;
+    private double rating;
 
-    public Movie(String title, String[] cast, String director, String overview, int runtime, int rating) {
+    public Movie(String title, String[] cast, String director, String overview, int runtime, double rating) {
         this.title = title;
         this.cast = cast;
         this.director = director;
@@ -30,7 +30,7 @@ public class Movie {
     public int getRuntime() {
         return runtime;
     }
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 }
