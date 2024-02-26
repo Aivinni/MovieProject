@@ -33,4 +33,7 @@ public class Movie {
     public double getRating() {
         return rating;
     }
+    public String toString() {
+        return title;
+    }
 }
